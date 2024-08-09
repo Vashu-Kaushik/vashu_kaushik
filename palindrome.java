@@ -1,13 +1,11 @@
-public class palindrome 
-{
+public class palindrome {
 
     public static boolean isPalindrome(String str) {
         int left = 0;
         int right = str.length() - 1;
 
         while (left < right) {
-            if (str.charAt(left) != str.charAt(right)) 
-            {
+            if (str.charAt(left) != str.charAt(right)) {
                 return false;
             }
             left++;
@@ -17,7 +15,7 @@ public class palindrome
     }
 
     public static void main(String[] args) {
-        String testString = "vashu";
+        String testString = "racecar";
         System.out.println("Is '" + testString + "' a palindrome? " + isPalindrome(testString));
     }
 }
