@@ -5,7 +5,7 @@
 
 - 🔭 I’m currently working on **Swastha Assist**
 
-- 🌱 I’m currently learning **WEB DEVELOPMENT**
+- 🌱 I’m currently learning **WEB DEVELOPMENT & JAVA**
 
 - 📫 How to reach me **itzmevashukaushik@gmail.com**
 
