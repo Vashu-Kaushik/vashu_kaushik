@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm 😊VASHU KAUSHIK😊 & I love to learn</h1>
+<h1 align="center">Hi 👋, I'm 😊VASHU KAUSHIK😊</h1>
 <h3 align="center">"Technology is best when it brings people together"</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=vashu-kaushik&label=Profile%20views&color=0e75b6&style=flat" alt="vashu-kaushik" /> </p>
