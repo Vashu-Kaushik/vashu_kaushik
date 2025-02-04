@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SwasthAssit - Your Health Companion">
+    <title>SwasthAssit</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+</style>
+<body>
+
+
+<script>
+    // Create and append Header
+    const header = document.createElement("header");
+    header.style.backgroundColor = "#28a745";
+    header.style.color = "white";
+    header.style.padding = "20px";
+    header.style.textAlign = "center";
+    
+    const headerTitle = document.createElement("h1");
+    headerTitle.textContent = "SwasthAssit";
+    header.appendChild(headerTitle);
+    
+    const tagline = document.createElement("p");
+    tagline.textContent = "Your Health Companion";
+    header.appendChild(tagline);
+
+    document.body.appendChild(header);
+
+    // Create and append Navigation
+    const nav = document.createElement("nav");
+    nav.style.backgroundColor = "#333";
+    nav.style.overflow = "hidden";
+    
+    const navLinks = [
+        { text: "Home", href: "#" },
+        { text: "About Us", href: "#about" },
+        { text: "Our Services", href: "#services" },
+        { text: "Contact", href: "#contact" }
+    ];
+
+    navLinks.forEach(link => {
+        const a = document.createElement("a");
+        a.href = link.href;
+        a.textContent = link.text;
+        a.style.float = "left";
+        a.style.display = "block";
+        a.style.color = "white";
+        a.style.textAlign = "center";
+        a.style.padding = "14px 20px";
+        a.style.textDecoration = "none";
+        
+        a.addEventListener("mouseover", () => {
+            a.style.backgroundColor = "#ddd";
+            a.style.color = "black";
+        });
+        a.addEventListener("mouseout", () => {
+            a.style.backgroundColor = "";
+            a.style.color = "white";
+        });
+        
+        nav.appendChild(a);
+    });
+
+    document.body.appendChild(nav);
+
+    // Create and append About Section
+    const aboutSection = document.createElement("section");
+    aboutSection.id = "about";
+    aboutSection.style.padding = "20px";
+    aboutSection.style.margin = "20px";
+    aboutSection.style.backgroundColor = "white";
+    aboutSection.style.borderRadius = "8px";
+    aboutSection.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+    
+    const aboutHeading = document.createElement("h2");
+    aboutHeading.textContent = "About SwasthAssit";
+    aboutSection.appendChild(aboutHeading);
+
+    const aboutText = document.createElement("p");
+    aboutText.textContent = "SwasthAssit is a leading online health platform dedicated to promoting wellness and a healthy lifestyle. We aim to empower individuals by providing the best resources, advice, and support to improve their health.";
+    aboutSection.appendChild(aboutText);
+
+    document.body.appendChild(aboutSection);
+
+    // Create and append Services Section
+    const servicesSection = document.createElement("section");
+    servicesSection.id = "services";
+    servicesSection.style.padding = "20px";
+    servicesSection.style.margin = "20px";
+    servicesSection.style.backgroundColor = "white";
+    servicesSection.style.borderRadius = "8px";
+    servicesSection.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+    
+    const servicesHeading = document.createElement("h2");
+    servicesHeading.textContent = "Our Services";
+    servicesSection.appendChild(servicesHeading);
+
+    const servicesList = document.createElement("ul");
+    const services = [
+        "Personalized Health Plans",
+        "Online Consultations with Experts",
+        "Health & Fitness Tracking Tools",
+        "Nutrition Advice and Meal Plans",
+        "Wellness Blog and Health Resources"
+    ];
+
+    services.forEach(service => {
+        const li = document.createElement("li");
+        li.textContent = service;
+        servicesList.appendChild(li);
+    });
+
+    servicesSection.appendChild(servicesList);
+    document.body.appendChild(servicesSection);
+
+    // Create and append Contact Section
+    const contactSection = document.createElement("section");
+    contactSection.id = "contact";
+    contactSection.style.padding = "20px";
+    contactSection.style.margin = "20px";
+    contactSection.style.backgroundColor = "white";
+    contactSection.style.borderRadius = "8px";
+    contactSection.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+    
+    const contactHeading = document.createElement("h2");
+    contactHeading.textContent = "Contact Us";
+    contactSection.appendChild(contactHeading);
+
+    const contactText = document.createElement("p");
+    contactText.textContent = "Have any questions or need more information? We’re here to help! Feel free to reach out to us.";
+    contactSection.appendChild(contactText);
+
+    const contactForm = document.createElement("form");
+    contactForm.onsubmit = function (event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        if (name && email && message) {
+            alert(`Thank you for contacting us, ${name}! We will get back to you soon.`);
+            contactForm.reset();
+        } else {
+            alert('Please fill in all the fields.');
+        }
+    };
+
+    const nameInput = document.createElement("input");
+    nameInput.id = "name";
+    nameInput.placeholder = "Your Name";
+    nameInput.required = true;
+    nameInput.style.width = "100%";
+    nameInput.style.padding = "10px";
+    nameInput.style.margin = "10px 0";
+    nameInput.style.border = "1px solid #ccc";
+    nameInput.style.borderRadius = "5px";
+    contactForm.appendChild(nameInput);
+
+    const emailInput = document.createElement("input");
+    emailInput.id = "email";
+    emailInput.type = "email";
+    emailInput.placeholder = "Your Email";
+    emailInput.required = true;
+    emailInput.style.width = "100%";
+    emailInput.style.padding = "10px";
+    emailInput.style.margin = "10px 0";
+    emailInput.style.border = "1px solid #ccc";
+    emailInput.style.borderRadius = "5px";
+    contactForm.appendChild(emailInput);
+
+    const messageTextarea = document.createElement("textarea");
+    messageTextarea.id = "message";
+    messageTextarea.placeholder = "Your Message";
+    messageTextarea.required = true;
+    messageTextarea.style.width = "100%";
+    messageTextarea.style.padding = "10px";
+    messageTextarea.style.margin = "10px 0";
+    messageTextarea.style.border = "1px solid #ccc";
+    messageTextarea.style.borderRadius = "5px";
+    contactForm.appendChild(messageTextarea);
+
+    const submitButton = document.createElement("button");
+    submitButton.textContent = "Submit";
+    submitButton.style.backgroundColor = "#28a745";
+    submitButton.style.color = "white";
+    submitButton.style.padding = "10px 20px";
+    submitButton.style.border = "none";
+    submitButton.style.borderRadius = "5px";
+    submitButton.style.cursor = "pointer";
+    contactForm.appendChild(submitButton);
+
+    contactSection.appendChild(contactForm);
+    document.body.appendChild(contactSection);
+
+    // Create and append Footer
+    const footer = document.createElement("footer");
+    footer.style.textAlign = "center";
+    footer.style.padding = "10px";
+    footer.style.backgroundColor = "#333";
+    footer.style.color = "white";
+    footer.textContent = "© 2025 SwasthAssit. All rights reserved.";
+    document.body.appendChild(footer);
+</script>
+
+</body>
+</html>
